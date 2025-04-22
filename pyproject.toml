@@ -1,0 +1,23 @@
+[project]
+name = "otel-sigv4-exporter"
+version = "0.1.0"
+description = "An OpenTelemetry exporter with native AWS Sigv4 signing, compatible with containerized Lambda apps"
+authors = [{name = "Bryan Tran", email = "bryan.tran@travania.app"}]
+license = "MIT"
+dependencies = [
+    "opentelemetry-api",
+    "opentelemetry-sdk",
+    "opentelemetry-exporter-otlp-proto-http",
+    "boto3",
+    "botocore",
+    "requests",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend ="setuptools.build_meta"
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: mark integration tests that hit external services",
+]
