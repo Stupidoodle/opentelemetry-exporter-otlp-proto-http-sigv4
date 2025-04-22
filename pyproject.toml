@@ -3,7 +3,7 @@ name = "otel-sigv4-exporter"
 version = "0.1.0"
 description = "An OpenTelemetry exporter with native AWS Sigv4 signing, compatible with containerized Lambda apps"
 authors = [{name = "Bryan Tran", email = "bryan.tran@travania.app"}]
-license = "MIT"
+license = {text = "MIT"}
 dependencies = [
     "opentelemetry-api",
     "opentelemetry-sdk",
