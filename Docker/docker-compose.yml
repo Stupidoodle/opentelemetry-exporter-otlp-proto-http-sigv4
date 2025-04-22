@@ -1,0 +1,11 @@
+services:
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"  # main edge port
+      - "4510-4559:4510-4559"  # service ports
+    environment:
+      - SERVICES=xray
+      - DEBUG=1
+    volumes:
+      - ./localstack:/etc/localstack/init/ready.d  # optional: startup script
